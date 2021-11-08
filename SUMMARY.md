@@ -2,7 +2,6 @@
 
 * [🚢 Introduction](README.md)
 * [🎉 Support](support.md)
-* [⏫ Upgrading to 3.x](upgrading-from-2.x.md)
 
 ## Getting Started
 

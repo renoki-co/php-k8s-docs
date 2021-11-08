@@ -1,7 +1,5 @@
 # 🎭 CRUD Operations
 
-CRUD operations are available only if you have set up [authentication](../getting-started/authentication.md), as the methods are available only from a `KubernetesCluster` instance.
-
 ### Retrieving all resources
 
 Getting all resources can be done by calling `->all()`:

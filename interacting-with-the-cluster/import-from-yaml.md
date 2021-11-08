@@ -1,6 +1,6 @@
 # 📦 Import from YAML
 
- **For the imports to work, you will need the `ext-yaml` extension.**
+&#x20;**For the imports to work, you will need the `ext-yaml` extension.**
 
 If you already have YAML files or YAML as a string, you can import them into PHP K8s resource classes:
 
@@ -24,27 +24,4 @@ foreach ($storageClasses as $sc) {
 
     echo "{$sc->getName()} storage class got synced!";
 }
-```
-
-### Import templated YAMLs
-
-This can be really useful if you decide to use the YAML import feature with local files to fill data that is being added dynamically. You would want to define your YAMLs and use curly brackets `{}` to define variables.
-
-```yaml
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: settings
-data:
-  key1: "{value1}"
-  key2: "{value2}"
-```
-
-In your code, you would use the `fromTemplatedYamlFile` and inject the values dynamically:
-
-```php
-$cm = $cluster->fromTemplatedYamlFile('file.yaml', [
-    'value1' => 'some-value-for-key-1',
-    'value2' => 'some-value-for-key-2',
-]);
 ```

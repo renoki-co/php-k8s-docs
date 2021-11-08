@@ -1,6 +1,6 @@
 # 🙌 Showcase
 
-Consider the following YAML configuration for a Service kind: 
+Consider the following YAML configuration for a Service kind:&#x20;
 
 ```yaml
 apiVersion: v1
@@ -17,13 +17,13 @@ spec:
       targetPort: 80
 ```
 
-With PHP K8s, you can write it into a more OOP manner: 
+With PHP K8s, you can write it into a more OOP manner:&#x20;
 
 ```php
 use RenokiCo\PhpK8s\KubernetesCluster;
 
 // Create a new instance of KubernetesCluster.
-$cluster = KubernetesCluster::fromUrl('http://127.0.0.1:8080');
+$cluster = new KubernetesCluster('http://127.0.0.1:8080');
 
 // Create a new NGINX service.
 $svc = $cluster->service()

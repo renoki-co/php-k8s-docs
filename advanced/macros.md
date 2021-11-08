@@ -29,3 +29,21 @@ K8sPod::macro('changeMetadata', function (array $metadata) {
 
 $pod->changeMetadata(['name' => 'mysql']);
 ```
+
+To initialize the resources from within the cluster, define a macro for `K8s` class.
+
+If you have new resources to initialize, you should define a macro for the `K8s` class, so that whenever you call it from a cluster object, you will be able to interact with it within the cluster.
+
+For example, for an [Agones Fleet](https://agones.dev/site/docs/reference/fleet), that is a custom third-party CRD and is not supported by this package, but can be initialized from the cluster object:
+
+```php
+use RenokiCo\PhpK8s\K8s;
+
+K8s::macro('agonesFleet', function ($cluster = null, array $attributes = []) {
+    return new Kinds\MyAgonesFleet($cluster, $attributes);
+});
+
+foreach ($cluster->agonesFleet()->all() as $fleet) {
+    //
+}
+```
