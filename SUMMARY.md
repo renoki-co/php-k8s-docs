@@ -9,7 +9,10 @@
 * [🚀 Installation](getting-started/installation.md)
 * [🙌 Showcase](getting-started/showcase.md)
 * [🔒 Authentication](getting-started/authentication.md)
-* [📗 Default Versions](getting-started/default-versions.md)
+* [♻ Active Development](getting-started/active-development/README.md)
+  * [📗 Default Versions](getting-started/active-development/default-versions.md)
+  * [🧙 Supported Kubernetes versions](getting-started/active-development/supported-kubernetes-versions.md)
+  * [🗳 Package versioning](getting-started/active-development/package-versioning.md)
 
 ## Cluster Interaction <a href="interacting-with-the-cluster" id="interacting-with-the-cluster"></a>
 
